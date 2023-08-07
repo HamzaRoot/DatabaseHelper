@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activites.RoomDatabaseA">
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="150dp"
+                    android:minWidth="200dp"
+                    android:hint="Enter Name"
+                    android:inputType="textCapWords"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="21sp" />
+
+                <EditText
+                    android:layout_marginStart="4dp"
+                    android:id="@+id/etAge"
+                    android:layout_width="150dp"
+                    android:minWidth="200dp"
+                    android:hint="Enter Age"
+                    android:inputType="numberSigned"
+                    android:layout_height="wrap_content"
+                    android:maxLength="2"
+                    android:text=""
+                    android:textSize="21sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_marginHorizontal="12dp"
+                android:layout_weight="1"
+                android:id="@+id/btnInsert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Insert" />
+
+            <Button
+                android:layout_marginHorizontal="12dp"
+                android:layout_weight="1"
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Update" />
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="12dp"
+                    android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Delete" />
+
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvRoomData"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

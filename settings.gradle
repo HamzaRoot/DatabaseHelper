@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "MVVM Demo"
+rootProject.name = "MVVM Quote"
 include ':app'

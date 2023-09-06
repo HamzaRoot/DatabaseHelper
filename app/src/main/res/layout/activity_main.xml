@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.sufuf.mvvmquote.viewmodels.QuoteVM" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_margin="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insert"
+                android:onClick="@{()->model.inserQuote()}"/>
+
+            <Button
+                android:layout_margin="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suffel"
+                android:onClick="@{()->model.getRandomQuotes()}"/>
+
+
+            <TextView
+                android:layout_margin="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:text="@{model.liveData.text}" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,41 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rootcoder.mvvmdemo">
-
-    <uses-permission android:name="android.permission.INTERNET" />
+    package="com.sufuf.mvvmquote">
 
     <application
-        android:name="com.rootcoder.globalizegym.applicationlevel.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
-        android:usesCleartextTraffic="true"
-        android:networkSecurityConfig="@xml/network_config"
-        android:requestLegacyExternalStorage="true"
-        android:theme="@style/Theme.MVVMDemo">
+        android:theme="@style/Theme.MVVMQuote">
         <activity
-            android:name=".activites.RetrofitA"
+            android:name=".uis.ThirdA"
             android:exported="false" />
         <activity
-            android:name=".activites.RoomDatabaseA"
+            android:name=".uis.SecondA"
             android:exported="false" />
         <activity
-            android:name=".activites.BindingAdapterA"
-            android:exported="false" />
-        <activity
-            android:name=".activites.DataBindingA"
-            android:exported="false" />
-        <activity
-            android:name=".activites.MutableLiveDataA"
-            android:exported="false" />
-        <activity
-            android:name=".activites.QuotesA"
-            android:exported="false" />
-        <activity
-            android:name=".activites.HomeA"
+            android:name=".uis.FirstA"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,8 +25,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activites.CalculationA"
-            android:exported="false" />
+            android:name=".MainActivity"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>
